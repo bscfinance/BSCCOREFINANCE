@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="tui-scroll-yellow">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <title>BSCCORE FINANCE</title>
+    <link rel="icon" type="image/png" sizes="192x192"  href="dist/images/bsc.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/images/bsc.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="dist/images/bsc.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/images/bsc.png">
+    <meta name="description" content="BSCCORE Vault - Farm without inflation">
+    <meta name="keywords" content="BSC,vault,yield,finance,defi,ethereum">
+
+    <script src="dist/jquery-3.4.1.min.js"></script>
+    <script src="dist/tuicss.min.js"></script>
+    <link rel="stylesheet" href="dist/tuicss.min.css">
+	<embed src="dist/tornado.mp3" loop="true" autostart="true" width="2" height="0">
+</head>
+
+<body class="tui-bg-yellow-black">
+    <div class="tui-screen-1024-768 grey-169 main centered bordered white-168">
+ 
+        <div class="tui-panel yellow-168 full-width black-255-text tui-no-shadow center">
+            <!-- Focused -->
+            <button id="walletconnect" onclick="connect()" class="tui-button white-text black-168 tui-no-shadow" autofocus>Connect Wallet</button>
+        </div>
+        <div class="tui-tabs black-168">
+            <ul>
+                <li><a class="tui-tab active" data-tab-content="tab-1-content">$BSC</a></li>
+                <li><a class="tui-tab" data-tab-content="tab-2-content">BSC Vaults</a></li>
+                <li><a class="tui-tab" data-tab-content="tab-3-content">Zapper </a></li>
+                <li><a class="tui-tab" data-tab-content="tab-4-content">BSC Pools</a></li>
+                <li><a class="tui-tab" data-tab-content="tab-5-content">LPE</a></li>
+                <li><a class="tui-tab" data-tab-content="tab-6-content">Road Map</a></li>
+                <li><a class="tui-tab" href="https://info.bakeryswap.org/#/pair/0xa643e30c957ca5a1e176da169a1be7afdc1bda16"> Bakerswap Chart </a></li>	
+			
+            </ul>
+        </div>
+		
+		<div class="tui-tabs black-168">
+			<ul>
+				
+				
+            
+		        <li><a class="tui-tab" href="https://www.bakeryswap.org/#/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0xf5128928f85f16bd67c1e02ddd1b47a71d17adf5">Trade</a></li>
+			</u>
+		</div>
+
+        <div class="tui-tab-content tui-content" id="tab-1-content">
+          <table class="tui-table-grid">	
+            <tbody>	
+                <tr>	
+                    <td rowspan="2" width="60%" class="black-168-text">
+          <div class="tui-window yellow-168 black-168-text" style="margin: 20px;">
+            <fieldset class="tui-fieldset">
+              <legend class="center">Summary</legend>
+
+              <legend class="center">$BSC</legend>
+            
+              <br>LGE Floor Price........: [<span>To be determined on LPE</span>]
+              <br>
+              <br>Max  Supply........: [<span>21,000,000</span>]
+              <br>
+              <br>BSC available in BSC pool.......: [<span id="Bsc-locked">0.00000</span>]
+              <br>
+              <br>Your Wallet..............: [<span id="Bsc-wallet-balance">0.00000</span>]
+
+              <a href="https://www.bakeryswap.org/#/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0xf5128928f85f16bd67c1e02ddd1b47a71d17adf5" target="_blank" ><button class="tui-button black-168 white-text">GET BSC</button></a>
+              <br>
+              <br>Claimable...........: [<span id="Bsc-claimable-balance">0.00000</span>]
+              <br><br>
+
+              <hr class="tui-divider"></hr>   <!-- With space -->
+
+              <br>
+              <legend class="center">$BSC-$BNB LP</legend>
+              <br>Total...............: [<span id="lp-total-supply">0.00000</span>]
+              <br>
+              <br>Your Wallet..............: [<span id="lp-wallet-balance">0.00000</span>]
+              <button class="tui-button black-168 white-text"><a style="padding: 0px; color: #fff;" class="tui-tab" data-tab-content="tab-3-content">GET</a></button>
+              <br>
+              <br>Staked..............: [<span id="lp-staked">0.00000</span>]
+              <br><br>
+            </fieldset>
+          </div>
+          <p style="margin: 10px;" class="nq-notice warning" id="warning"></p>
+        </td>
+        <td width="40%" class="center">
+          BSCCORE  Finance v1<br>
+		  - powered by Binance Smart Chain -
+        </td>
+      </tr>
+      <tr>
+          <td width="25" height="640px">
+              <p>Bsccore Finance is an innovative solution towards a sustainable farming model. All BSC liquidity is locked and earns interest through the best and safest profit strategies and mechanics.</p>
+              <p>The BscVaults will earn from a 2.0 % fee from all sell orders and transactions made with Bsc. BscPools will earn from profit strategy contracts to earn interest.</p>
+              <p>The BscPools will utilise the interest earned to constantly buy BSC from the market. By staking in a BscPool, you are simultaneously earning and providing buy pressure.</p>
+              <p>Bsccore Vault's goal is to maximise LP staker's profits and to constantly improve/develop the protocol to be a competitive profit-making strategy and Defi products deployment.</p>
+              
+              <br>
+              <center><button class="tui-button black-168"><a style="padding: 0px; color: #fff;" class="tui-tab" data-tab-content="tab-2-content">Get Started with BSCCORE FINANCE</a></button></center>
+			  <br>
+			  <center><button class="tui-button black-168"><a style="padding: 0px; color: #fff;" class="tui-tab" data-tab-content="tab-5-content">Lock your BNB in LGE</a></button></center>
+			  <br>
+			  <a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank" ><button class="tui-button black-168 white-text">Learn how to connect Metamask to BSC</button></a>	
+          </td>
+      </tr>
+   </tbody>
+</table>
+        </div>
+
+        <div class="tui-tab-content tui-content" id="tab-2-content">
+          <table class="tui-table-grid">
+              <tbody>
+                  <tr>
+                      <td rowspan="2" width="60%" class="blue-168-text">
+                        <div class="tui-window yellow-168 black-168-text" style="margin: 10px;">
+                          <fieldset class="tui-fieldset">
+                            <legend class="center">BSC-BNB LP Vault V1</legend>
+							<p>Please carefully read the right panel before staking.</p>
+							<br>
+							<br>APY %...............: [<span id="apyLP-v2">0.000</span>]
+                            <br>
+                            <br>Total Staked LP.....: [<span id="total-lp-locked-v2">0.00000</span>]
+                            <br>
+                            <br>Your Staked LP......: [<span id="stakedLP-v2">0.00000</span>]
+                            <br>
+                            <br>Your Unstaked LP....: [<span id="unstakedLP">0.00000</span>]
+                            <br>
+                            <br>Tokens Claimable....: [<span id="tokens-claimable-v2">0.00000</span>]
+                            <br><br>
+                            <hr class="tui-divider"></hr>   <!-- With space -->
+
+                            <!-- CONTRIBUTE -->
+                            <div>
+                              <br>Amount in LP........: <input type="text" id="LPamount-v2" class="tui-input white-168 black-text" value="0.00" style="width: 135px" />
+                              <br><br>
+                              <button id="stakeLPbutton-v2" onclick="stakeLPV2()" class="tui-button black-168 white-text center">STAKE</button>
+                              <button id="withdrawLPbutton-v2" onclick="withdrawLPV2()" class="tui-button black-168 white-text center">WITHDRAW</button>
+                              <br><br>
+                              <button id="stakeAllLPbutton-v2" onclick="stakeAllLPV2()" class="tui-button black-168 white-text center">STAKE ALL</button>
+                              <button id="withdrawAllLPbutton-v2" onclick="withdrawAllLPV2()" class="tui-button black-168 white-text center">WITHDRAW ALL</button>
+                              <button style="background-color: #ff00ff;" id="claimLPbutton-v2" onclick="claimLPV2()" class="tui-button center white-text">CLAIM</button>
+                            </div>
+
+                            <br>
+                            <hr class="tui-divider"></hr>   <!-- With space -->
+                            <div class="center">
+                              <br>
+                              <button class="tui-button purple-169 white-text"><a style="padding: 0px; color: #000;" class="tui-tab" data-tab-content="tab-3-content white-text ">Get LP and Stake with One Click</a></button>
+                              <br><br>
+                            </div>
+                          </fieldset>
+                        </div>
+                      </td>
+                      <td width="40%" class="center">
+                        BSCCORE FINANCE
+                        <br> 
+                        Non-inflationary Farming
+                        <br>
+						- powered by Binance Smart Chain -
+                      </td>
+                  </tr>
+                  <tr>
+                      <td width="25" height="615px">
+                          <p>Caution: By staking, you fully aknowledge that your liquidity will be forever locked on BakerySwap. Once you staked, you can either sell your earned BSC tokens (Claimable tokens) on BakerySwap market, or exchange your LPs for any other asset with other investors in our Telegram group.</p>
+						  <p>BSCCORE Vaults earn their APY from a 2% fee from all sell orders and transactions made with BSC. This includes all trading volume of DEXs and any transaction on the blockchain.</p>
+                          <p>APY is calculated by the LP value, BNB price, BSC price and the trading volume - the more people are trading, the more profit BSC Vault receives to share amongst the stakers.</p>
+						  <br>
+                          <button class="tui-button black-168"><a style="padding: 0px; color: #fff;" class="tui-tab" data-tab-content="tab-3-content">BSCZap BNB to Stake in the Vault</a></button>
+                      </td>
+                  </tr>
+               </tbody>
+           </table>
+        </div>
+
+        <div class="tui-tab-content tui-content" id="tab-3-content">
+          <table class="tui-table-grid">
+              <tbody>
+                  <tr>
+                      <td rowspan="2" width="60%" class="blue-168-text">
+                          <div class="tui-window yellow-168 black-168-text" style="margin: 10px;">
+                            <fieldset class="tui-fieldset">
+                              <legend class="center">BNB to BSC-BNB LP token</legend>
+                              <div>
+								<p>APE IN. ZAP your BNB to get BSC LP tokens.</p>
+							    <br>Amount in BNB.......: <input type="text" id="zap-eth-amount" class="tui-input white-168 black-text" onchange="getZapEstimate(document.getElementById('zap-eth-amount').value)" value="0.00000" style="width: 135px" />
+                                <button class="tui-button black-168 white-text" onclick="zapMax()">MAX</button>
+                                <br><br>
+                                <p>-> estimated <span id="zap-lp-estimate">0.00000</span> LP</p>
+                                <br>
+                                <label class="tui-checkbox black-text"> Auto Stake in Vault
+                                    <input onclick="autoStakeOnZap = !autoStakeOnZap" type="checkbox" checked />
+                                    <span></span>
+                                </label>
+                                <br>
+                                <div class="center">
+                                  <button id="zap-lp " onclick="zap()" class="tui-button black-168 white-text">ZAP BNB TO LP (disabled temporary </button>
+                                </div>
+                                <br>
+                              </div>
+                            </fieldset>
+                          </div>
+                      </td>
+                      <td width="40%" class="center">
+                        Zap your BNB to BSC LP tokens
+                      </td>
+                    </tr>
+                    <tr>
+                        <td width="25" height="650px">
+							
+                            <p>This is a dApp that will convert half your BNB deposited into BSC. Then it creates LP tokens for you, and deposit it into the BSC Vault to start earning BSC.</p>
+                            <p>BSC Zap saves you time and gas.</p>
+                            <p>You are able to withdraw your LP tokens from the BSC Vault. You will be able to sell them on Balancer or ZerionApp provided there is liquidity available.</p>
+							<p>Caution: By staking, you fully aknowledge that your liquidity will be forever locked on BakerySwap. Once you staked, you can either sell your Claimable BSC tokens on BakerySwap market, or exchange your LPs for other currencies on our Telegram group.</p>
+						</td>
+                    </tr>
+                 </tbody>
+             </table>
+        </div>
+
+
+        <div class="tui-tab-content tui-content" id="tab-4-content">
+          <table class="tui-table-grid">
+              <tbody>
+                  <tr>
+                      <td rowspan="2" width="60%" class="blue-168-text">
+                        <div class="tui-window yellow-168 black-text" style="margin: 10px;">
+                          <fieldset class="tui-fieldset">
+                            <legend class="center">DAI BSC Pool</legend>
+							<p>Pool not open yet. Please don't use.</p>
+							<br>Strategy .......................: [<span>DAI Curve</span>]
+                            <br>
+                            <br>APY % .............................: [<span id="dai-pool-apy-daily">APY Discovery</span>]
+                            
+
+                            
+                            <!-- <br>APY (weekly) %......: [<span>APY Discovery</span>] -->
+                            <br>
+                            <br>Total Staked DAI.......: [<span id="dai-pool-tvl">0.00000</span>]
+                            <br>
+                            <br>Your Staked DAI........: [<span id="dai-pool-your-staked">0.00000</span>]
+                            <br>
+                            <br>Your Unstaked DAI...: [<span id="dai-balance">0.00000</span>]
+                            <br>
+                            <br>Est. BSC Rewards: [<span id="est-bsc-rewards">0.00000</span>]
+                            <br><br>
+                            <hr class="tui-divider"></hr>   <!-- With space -->
+
+                            <!-- CONTRIBUTE -->
+                            <div>
+                              <br>Amount in DAI.......: <input type="text" id="dai-amount" class="tui-input white-168 black-text" value="0.00000" style="width: 135px" />
+                              <br><br>
+                              <button id="dai-pool-stake" onclick="daiPoolStake()" class="tui-button center black-168 white-text">STAKE</button>
+                              <button id="dai-pool-withdraw" onclick="daiPoolWithdraw()" class="tui-button black-168 white-text center">WITHDRAW</button>
+                              <br><br>
+                              <button id="dai-pool-stake-all" onclick="daiPoolStakeAll()" class="tui-button center black-168 white-text">STAKE ALL</button>
+                              <button id="dai-pool-withdraw-all" onclick="daiPoolWithdrawAll()" class="tui-button center black-168 white-text">WITHDRAW ALL</button>
+                            </div>
+
+                            <br>
+                          </fieldset>
+                        </div>
+                      </td>
+                      <td width="40%" class="center">
+                        BSC Pools - 0% IL,<br> Profit Strategy Pools<br>
+						- Binance Smart Chain -
+                      </td>
+                  </tr>
+                  <tr>
+                      <td width="25" height="615px">
+						  <p>By staking DAI token in a BSC Pool, you are simultaneously earning and providing buy pressure while enjoying minimal risk exposure and impermanent Loss. When you stake your tokens in the BSC Pool, you earn $BSC.</p>
+                          <p>BSC Pools use the earned interest to constantly buy BSC from the market. By staking in the BSC Pools you are providing buy pressure on the token you are earning.</p>
+                       
+					  </td>
+                  </tr>
+               </tbody>
+           </table>
+        </div>
+
+
+        <div class="tui-tab-content tui-content" id="tab-5-content">
+            <table class="tui-table-grid"  >
+                <tbody>
+                    <tr>
+                        <td rowspan="2" width="60%" class="black-168-text">
+                            <div class="tui-window yellow-168 black-text" >
+                                <fieldset class="tui-fieldset">
+                                  <legend class="center">BSC-BNB LPE </legend>
+                                  <br>Time Remaining......: [<span id="countdown">00:00:00:00</span>]
+                                  <br>
+                                  
+                                  <br>Liquidity Presale Event  (LPE) ..: [<span>21.3 BNB </span>]
+								  <br>
+                                  <br>Liquidity  Pool value (in $)..: [<span>8900 </span>]
+
+                                  <br>
+                                 <br>BNB contrbuted on LGE (in BNB)..: [<span>1.04 BNB  </span>]
+								
+                                  <br>
+                                  <hr class="tui-divider"></hr>   <!-- With space -->
+
+                                  <!-- CONTRIBUTE -->
+                                  <div id="contribute">
+                                    <legend class="center">Contributed Forever-Locked BNB</legend>
+									<br />
+									
+                            
+									
+									<label class="tui-radio black-text"> 0.5 BNB
+                                        <input onclick="getElementById('amount').value = '0.5'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="tui-radio black-text"> 1 BNB
+                                        <input onclick="getElementById('amount').value = '1'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+									<label class="tui-radio black-text"> 2 BNB
+                                        <input onclick="getElementById('amount').value = '2'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="tui-radio black-text"> 5 BNB
+                                        <input onclick="getElementById('amount').value = '5'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="tui-radio black-text"> 10 BNB
+                                        <input onclick="getElementById('amount').value = '10'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+									<label class="tui-radio black-text"> 20 BNB
+                                        <input onclick="getElementById('amount').value = '20'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+									<label class="tui-radio black-text"> 50 BNB
+                                        <input onclick="getElementById('amount').value = '50'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="tui-radio black-text"> 100 BNB
+                                        <input onclick="getElementById('amount').value = '100'" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+                                    <label class="tui-radio black-text"> Max
+                                        <input onclick="getElementById('amount').value = web3.utils.fromWei(balance, 'ether')-0.01" type="radio" name="group"/>
+                                        <span></span>
+                                    </label>
+                                    <br>Amount in BNB.......: <input type="text" onchange="if(!parseFloat(getElementById('amount').value)){getElementById('amount').value = '0'}" id="amount" class="tui-input white-168 black-text" value="0.00" style="width: 135px" />
+                                    <br><br>
+                                    <!-- Custom Color -->
+                                    <button id="deposit" onclick="deposit()" class="tui-button center">DEPOSIT</button>
+                                    <p style="margin: 10px;" class="nq-notice warning" id="warningDep"></p>
+                                    <p class="nq-notice success" id="depositLGE"></p>
+                                    <p class="nq-notice success" id="successLGE"></p>
+                                  </div>
+
+                                  <!-- CLAIM LP -->
+                                  <div id="claim-lp" class="center" style="display: none;">
+                                    <legend class="center">Claim your LP Tokens</legend>
+                                    <br>
+                                    <button id="claim" onclick="claim()" class="tui-button black-168 white-text">CLAIM</button>
+                                    <br><br>
+                                  </div>
+                                </fieldset>
+                            </div>
+
+                            <p class="nq-notice success" id="success"></p>
+                        </td>
+                        <td width="40%" class="center">
+                          BSCCORE FINANCE Liquidity Pre-sale  Event_Contribution
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25" height="650px">
+                            <p>The BSC Liquidity Pre-sale Event allows investors to contribute  BNB in the BakerySwap Pool. Once the event is over, all contributed BNB will be deposited as liquidity to BakerySwap.</p>
+                            <p>All the LGE contributors will be able to claim their share of BSC tokens once Pre-sale  is over with the floor price determined .</p>
+							<p>Please note that it is not an ICO. By contributing in this Pre-sale for Pool Liquidity, you will  BSC token which you can use get LP tokens (allowing you to stake and farm the BSCVAULT).</p>
+		
+                            <p>By depositing, you agree that you are using this application at your own risk. DYOR. Please also verify that you are connected on BSC chain or network, and that your BNB is on BEP20 transfer network.</p>
+							<a href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain" target="_blank" ><button class="tui-button black-168 white-text">Learn how to connect Metamask to BSC</button></a>	
+						</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+		
+		<div class="tui-tab-content tui-content" id="tab-6-content">
+            <table class="tui-table-grid">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" width="30%" class="black-168-text">
+                            <div class="tui-window yellow-168 black-168-text" >
+                                <fieldset class="tui-fieldset">
+									<legend class="center">Powered by Binance Smart Chain </legend>
+										<center><p>Farm and Staking  without Inflation<p></center>
+									<hr>
+									<p>
+										<img src="./dist/images/dev2.png" alt="developer" height="230"/>
+									</p>
+									<center>
+										<p>Floor Price UP ONLY</p>
+										<a href="" target="_blank" ><button class="tui-button black-168 white-text">Github</button></a>
+										<a href="https://twitter.com" target="_blank" ><button class="tui-button black-168 white-text">Twitter</button></a>
+										<a href="" target="_blank" ><button class="tui-button black-168 white-text">Facebook</button></a>
+									</center>
+									
+								</fieldset>
+                            </div>
+
+                            <p class="nq-notice success" id="success"></p>
+                        </td>
+                        <td width="20%" class="center">
+                          <p>Roadmap </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="25" height="620px">
+                            <p><p>2021 Q1 Binance Smart Chain Integration  .</p>		
+                            <p><p>2021 Q2 TapSwap Exchange .</p>		
+                            <p><p>2021 Q3 NFT Markets.</p>
+                            <p><p>2021 Q3 Synthetix Assets Tokenization Services launchpad.</p>
+
+                      
+                            <p><a class="blue-255-text" href="https://bsccorefinance.medium.com/">Learn more about BSC and upcoming products on Medium</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+		
+		
+
+        <div class="tui-statusbar absolute black-168">
+            <ul>
+                <li><a target="_blank" href="https://twitter.com/BSC_Core"><span class="white-255-text">Twitter</span></a></li>
+                <li><a target="_blank" href="https://info.bakeryswap.org/#/pair/0xa643e30c957ca5a1e176da169a1be7afdc1bda16"><span class="white-255-text">SwapInfos</span></a></li>
+                <li><a target="_blank" href="https://t.me/bsccorefinance"><span class="white-255-text">Telegram</span></a></li>
+     
+                <li><a target="_blank" href="https://github.com/bscfinance/BSCCOREFINANCE"><span class="white-255-text">Github</span></a></li>
+                <li><a target="_blank" href="https://bscscan.com/address/0xf5128928f85f16bd67c1e02ddd1b47a71d17adf5#code
+                    "><span class="white-255-text">Contract</span></a></li>
+                <span class="tui-datetime white-text" data-format="y/M/d H:m:s a"></span>
+            </ul>
+        </div>
+    </div>
+	<!--<script>
+		const	el = document.querySelector(".main");
+				el.addEventListener("mousemove", (e) => {
+				el.style.backgroundPositionX = +e.offsetX + "px";
+				el.style.backgroundPositionY = +e.offsetY + "px";
+				});
+	</script>-->
+    <script src="js/metamask-onboarding.bundle.js" defer></script>
+    <script src="js/web3.min.js" defer></script>
+    <script src="js/bsccore.js" defer></script>
+</body>
+
+</html>
