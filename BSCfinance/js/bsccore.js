@@ -20,7 +20,7 @@ const BScV2Address = '0xd81b3aa8d4a995c8676524568c387f594297a149';
 const wethAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
 const routerAddress = '';
 const daiAddress = '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3';
-//const tPoolDaiAddress = '0xb12a30b72ab4a7f00d1e5e66a6d74d621b35c8bc';
+//const bscPoolDaiAddress = '0xb12a30b72ab4a7f00d1e5e66a6d74d621b35c8bc';
 
 var eventEndTime = new Date("Feb 18, 2021 21:55:30").getTime();
 
